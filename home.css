@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+body {
+    min-height: 100%;
+    margin: 0;
+     padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(75, 75, 75);
+}
+
+html {
+
+    height: 100%;
+    background: url(https://images.unsplash.com/photo-1514315153150-cd7d8d716178?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80) fixed no-repeat;
+}
+
+
+#left {
+    color: white;
+    position: absolute;
+    animation: cloud-left 1.4s ease 1.2s 1 normal forwards running;
+    font-size: 500pt;
+}
+
+#right {
+    color: white;
+    position: absolute;
+    animation: cloud-right 1.4s ease 1.2s 1 normal forwards running;
+    font-size: 500pt;
+}
+
+@keyframes cloud-right {
+    0% {}
+
+    100% {
+        -webkit-transform: translate(-100px, 10px);
+        transform: translate(-100px, 10px);
+        opacity: 0%;
+    }
+}
+
+@keyframes cloud-left {
+    0% {}
+
+    100% {
+        -webkit-transform: translate(100px, 10px);
+        transform: translate(100px, 10px);
+        opacity: 0%;
+
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.cloudContainer {
+    margin-left: 25vw;
+}
+
+.bodyContainer {
+    position: relative;
+    color: #383838;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 3em;
+    opacity: 0;
+    animation: fadeUp 1.5s ease 1.5s;
+    animation-fill-mode: forwards;
+    border-radius: 5px;
+    width: 60%;
+    background-color: white;
+    margin: 30px auto;
+    border-top-right-radius: 0px;
+
+}
+
+.bodyText {
+    overflow: hidden;
+    height: 1%;
+}
+
+
+.bodyContainer h1 {
+    font-size: 3em;
+    padding: 25px 0px;
+}
+
+.bodyContainer h2 {
+    font-size: 2.5em;
+    padding: 25px 0px;
+}
+
+.bodyContainer h3 {
+    font-size: 2em;
+    padding: 25px 0px;
+}
+
+.bodyContainer h4 {
+    font-size: 1.5em;
+    padding: 20px 0px;
+}
+
+.bodyContainer p {
+    margin-top: 15px;
+}
+
+.bodyContainer img {
+    padding: 10px;
+    width: 250px;
+    height: 250px;
+    float: right;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -29px;
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    padding: 10px 40px;
+    text-align: center;
+    height: 30px;
+    background-color: white;
+    font-size: 1.3em;
+}
+
+nav li:first-child {
+    background-color: white;
+    clip-path: polygon(100% 0, 68% 100%, 100% 100%);
+
+}
+
+nav li:last-child {
+    border-top-right-radius: 10px;
+}
+
+nav li a {
+    color: #383838;
+    transition: border-bottom .2s;
+}
+
+nav li a:hover {
+    border-bottom: 2px solid #383838;
+}
